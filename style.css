@@ -1,0 +1,418 @@
+/* RESETS */
+body,
+p,
+h2,
+h3,
+img,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #d1d1d1;
+  height: 100vh;
+  font-family: "Darker Grotesque", sans-serif;
+}
+/* MAIN HEADER */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #032b43;
+}
+
+.logo {
+  color: #136f63;
+}
+
+.logo-img {
+  width: 200px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.cart-button {
+  height: 60px;
+  width: 80px;
+  margin-right: 10px;
+}
+
+/* MAIN CONTAINER  */
+.main-container {
+  height: 80vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-category {
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #136f63;
+  color: #fff;
+  width: 50%;
+  height: 130px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 500;
+  box-shadow: -5px 5px #3a3a3a;
+  letter-spacing: 2px;
+}
+
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hide {
+  display: none;
+}
+
+.menu-popup {
+  position: relative;
+  height: 80%;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.exit-button {
+  position: absolute;
+  height: 40px;
+  width: 60px;
+  top: -20px;
+  right: -20px;
+  border-radius: 10px;
+}
+
+.exit-text {
+  font-size: 12px;
+}
+
+.card {
+  background-color: #136f63;
+  color: #fff;
+  width: 70%;
+  height: 20%;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.food-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.food-description {
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+  line-height: 90%;
+}
+
+.food-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-to-button {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+}
+
+.add-to-text {
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* CART FUCTIONALITY */
+.cart-popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cart-menu {
+  position: relative;
+  height: 80%;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.cart-header {
+  position: absolute;
+  top: 10px;
+  font-size: 30px;
+}
+
+.cart-subheader {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.cart-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list-of-items {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.cart-list-item {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 20px;
+}
+
+.cart-price {
+  margin: 0 10px 0 225px;
+}
+
+.cart-name {
+  text-align: center;
+  width: 500px;
+  /* margin-left: 10px; */
+}
+
+.item-delete {
+  padding: 5px;
+  order: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.checkout-button {
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #032b43;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.cash-pay {
+  width: 120px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #136f63;
+  color: #fff;
+  font-size: 16px;
+}
+
+.cash-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.change-button {
+  margin-top: 10px;
+  width: 120px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #d1d1d1;
+  color: #000;
+  font-size: 16px;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pay {
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #eea928;
+  font-size: 16px;
+}
+
+.change {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* RECEIPT */
+
+.receipt-popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.receipt-logo {
+  width: 350px;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.receipt {
+  position: relative;
+  height: 80%;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.receipt-list-of-items {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.receipt-button {
+  width: 120px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #d1d1d1;
+  color: #000;
+  font-size: 16px;
+}
+
+.credit-card-text {
+  font-size: 18px;
+}
+
+.print-button {
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  bottom: -30px;
+  right: 50%;
+  transform: translate(50%, 30%);
+  border-radius: 10px;
+  width: 120px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #d1d1d1;
+  color: #000;
+}
+
+.print-text {
+  font-size: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .menu-category {
+    padding: 50px 0;
+    width: 40vw;
+    margin: 0;
+  }
+
+  .food-name {
+    font-size: 22px;
+  }
+
+  .food-description {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+
+  .food-price {
+    font-size: 18px;
+  }
+
+  .cart-menu {
+    width: 600px;
+  }
+
+  .cart-price {
+    margin: 0 10px 0 325px;
+  }
+}
